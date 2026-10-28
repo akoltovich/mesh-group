@@ -1,0 +1,3 @@
+databaseChangeLog:
+  - include:
+      file: db/0.0.1/migration/changeset-0001.yml

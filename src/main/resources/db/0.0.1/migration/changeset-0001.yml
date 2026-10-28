@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - include:
+      file: db/0.0.1/migration/create-table-user.sql
+  - include:
+      file: db/0.0.1/migration/create-table-account.sql
+  - include:
+      file: db/0.0.1/migration/create-table-email-data.sql
+  - include:
+      file: db/0.0.1/migration/create-table-phone-data.sql
+  - include:
+      file: db/0.0.1/migration/insert-test-data.sql

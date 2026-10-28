@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: mesh-group
+  # Настройки подключения к Postgres в Docker
+  datasource:
+    url: jdbc:postgresql://localhost:5432/meshgroup
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  # Настройки Liquibase с новым путем к мастер-файлу
+  liquibase:
+    enabled: true
+    changelog: classpath:db/db_changelog_master.yml
+
+  # Настройки Redis для будущего кэширования и сессий
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+  cache:
+    cache-names:
+      - user_search
+      - user_auth
